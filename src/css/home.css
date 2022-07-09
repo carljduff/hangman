@@ -1,0 +1,21 @@
+body {
+    background-color: #96ADC8;
+}
+
+.player-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.choice-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.game-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
