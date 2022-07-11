@@ -16,3 +16,19 @@
 .active {
     display: none;
 }
+
+.letter-box {
+    display: flex;
+    flex-direction: row wrap;
+    position: fixed;
+    margin-top: 20px;
+    right: 150px;
+    width: 200px;
+    height: 180px;
+    border: 2px solid black;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+
+}

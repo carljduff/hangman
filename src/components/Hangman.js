@@ -9,7 +9,7 @@ import '../css/hangman.css';
 
 
 const Hangman = () => {
-    const letters = [
+    const alpha = [
         {id: 1, letter:'a'}, 
         {id: 2, letter:'b'}, 
         {id: 3, letter:'c'}, 
@@ -39,16 +39,23 @@ const Hangman = () => {
     ]
 
     const [active, setActive] = useState(false)
+    const [text, setText] = useState("")
 
-  
+    const buttonHandler = (e) => {
+        setText([...text, e.target.innerText + ' ']);
+       e.target.innerText = "";
+    }
 
     return(
         <>
+        <div className="letter-box">
+            {text}
+
+        </div>
       
         <div className="letter-pick">
-           {letters.map(({letter, id}) => <button key={id} onClick={buttonHandler} className={`letter-btn ${active ? "active" : ""}`}>{letter.toUpperCase()}</button>)}
+           {alpha.map(({letter, id}) => <button onClick={buttonHandler} key={id} className={`letter-btn ${active ? "active" : ""}`}>{letter.toUpperCase()}</button>)}
         </div>
-        
         </>
     )
 }
